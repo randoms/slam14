@@ -20,7 +20,7 @@ class ORBErrorEdge:public g2o::BaseUnaryEdge<1, double, g2o::VertexSE3Expmap> {
 public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
 
-    ORBErrorEdge(cv::Mat img, cv::KeyPoint kp, cv::Mat desp, Eigen::Matrix3d     K):
+    ORBErrorEdge(cv::Mat img, cv::KeyPoint kp, cv::Mat desp, Eigen::Matrix3d K):
         _img(img),_kp(kp), _desp(desp), _K(K)
     {
         _detector = cv::ORB::create();
